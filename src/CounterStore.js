@@ -1,7 +1,6 @@
 'use strict';
 
-const Log          = require('ipfs-log')
-const Store        = require('../Store');
+const Store        = require('orbit-db-store');
 const CounterIndex = require('./CounterIndex');
 
 class CounterStore extends Store {
