@@ -1,5 +1,5 @@
 {
-  "name": "orbit-counterstore",
+  "name": "orbit-db-counterstore",
   "version": "0.0.2",
   "description": "Counter store for orbit-db",
   "main": "src/CounterStore.js",
