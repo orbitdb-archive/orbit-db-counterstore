@@ -1,0 +1,15 @@
+{
+  "name": "orbit-counterstore",
+  "version": "0.0.1",
+  "description": "Counter store for orbit-db",
+  "main": "src/CounterStore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Haad",
+  "license": "MIT",
+  "dependencies": {
+    "crdts": "0.0.1",
+    "orbit-db-store": "0.0.1"
+  }
+}
