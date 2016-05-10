@@ -17,15 +17,14 @@ class CounterStore extends Store {
     const counter = this._index.get();
     if(counter) {
       counter.increment(amount);
-      const operation = {
+      return this._addOperation({
         op: 'COUNTER',
         key: null,
         value: counter.payload,
         meta: {
           ts: new Date().getTime()
         }
-      };
-      return this._addOperation(operation);
+      });
     }
   }
 }
