@@ -5,7 +5,8 @@ const CounterIndex = require('./CounterIndex');
 
 class CounterStore extends Store {
   constructor(ipfs, id, dbname, options) {
-    Object.assign(options || {}, { Index: CounterIndex });
+    if(!options) options = {};
+    if(!options.Index) Object.assign(options, { Index: CounterIndex });
     super(ipfs, id, dbname, options)
   }
 
