@@ -1,14 +1,14 @@
-'use strict';
+'use strict'
 
-const Counter = require('crdts/src/G-Counter');
+const Counter = require('crdts/src/G-Counter')
 
 class CounterIndex {
   constructor(id) {
-    this._counter = new Counter(id);
+    this._counter = new Counter(id)
   }
 
   get() {
-    return this._counter;
+    return this._counter
   }
 
   updateIndex(oplog, added) {
@@ -20,4 +20,4 @@ class CounterIndex {
   }
 }
 
-module.exports = CounterIndex;
+module.exports = CounterIndex
