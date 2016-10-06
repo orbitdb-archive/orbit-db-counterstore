@@ -9,7 +9,7 @@ class CounterStore extends Store {
     super(ipfs, id, dbname, options)
   }
 
-  value() {
+  get value() {
     return this._index.get().value
   }
 
