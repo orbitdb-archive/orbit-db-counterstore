@@ -58,37 +58,7 @@ See [example/index.html]() for a detailed example. Note that to run this example
 
 ## API
 
-### counter(name)
-
-  Package: 
-  [orbit-db-counter](https://github.com/haadcode/orbit-db-counter)
-
-  ```javascript
-  const counter = orbitdb.counter('song_123.play_count')
-  ```
-
-  - **value**
-    ```javascript
-    counter.value // 0
-    ```
-
-  - **inc([value])**
-    ```javascript
-    counter.inc()
-    counter.value // 1
-    counter.inc(7)
-    counter.value // 8
-    counter.inc(-2)
-    counter.value // 8
-    ```
-    
-  - **events**
-
-    ```javascript
-    db.events.on('data', (dbname, event) => ... )
-    ```
-
-    See [Events](https://github.com/haadcode/orbit-db-store#events) for full description
+See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#counterstorename) for full details.
 
 ## Contributing
 
