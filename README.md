@@ -88,7 +88,7 @@ See [example/index.html]() for a detailed example. Note that to run this example
     db.events.on('data', (dbname, event) => ... )
     ```
 
-    See [events](#stores) for full description.
+    See [Events](https://github.com/haadcode/orbit-db-store#events) for full description
 
 ## Contributing
 
