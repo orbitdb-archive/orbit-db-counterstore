@@ -11,9 +11,9 @@ class CounterIndex {
     return this._counter
   }
 
-  updateIndex(oplog, added) {
+  updateIndex(oplog) {
     if(this._counter) {
-      added.filter((f) => f && f.payload.op === 'COUNTER')
+      oplog.items.filter((f) => f && f.payload.op === 'COUNTER')
         .map((f) => Counter.from(f.payload.value))
         .forEach((f) => this._counter.merge(f))
     }
