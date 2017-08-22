@@ -4,18 +4,18 @@ const Counter = require('crdts/src/G-Counter')
 
 class CounterIndex {
   constructor(id) {
-    this._counter = new Counter(id)
+    this._index = new Counter(id)
   }
 
   get() {
-    return this._counter
+    return this._index
   }
 
   updateIndex(oplog) {
-    if(this._counter) {
-      oplog.items.filter((f) => f && f.payload.op === 'COUNTER')
+    if(this._index) {
+      oplog.values.filter((f) => f && f.payload.op === 'COUNTER')
         .map((f) => Counter.from(f.payload.value))
-        .forEach((f) => this._counter.merge(f))
+        .forEach((f) => this._index.merge(f))
     }
   }
 }

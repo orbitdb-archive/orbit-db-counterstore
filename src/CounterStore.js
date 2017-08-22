@@ -1,12 +1,13 @@
 'use strict'
 
-const Store        = require('orbit-db-store')
+const Store = require('orbit-db-store')
 const CounterIndex = require('./CounterIndex')
 
 class CounterStore extends Store {
   constructor(ipfs, id, dbname, options = {}) {
     if(!options.Index) Object.assign(options, { Index: CounterIndex })
     super(ipfs, id, dbname, options)
+    this._type = 'counter'
   }
 
   get value() {
