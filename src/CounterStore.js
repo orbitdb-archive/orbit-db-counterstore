@@ -22,9 +22,6 @@ class CounterStore extends Store {
         op: 'COUNTER',
         key: null,
         value: counter.payload,
-        meta: {
-          ts: new Date().getTime()
-        }
       })
     }
   }
