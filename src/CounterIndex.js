@@ -13,9 +13,11 @@ class CounterIndex {
 
   updateIndex(oplog) {
     if(this._index) {
-      oplog.values.filter((f) => f && f.payload.op === 'COUNTER')
-        .map((f) => Counter.from(f.payload.value))
-        .forEach((f) => this._index.merge(f))
+      const createCounter = e => Counter.from(e.payload.value)
+      const mergeToIndex = e => this._index.merge(e)
+      oplog.values.filter(e => e && e.payload.op === 'COUNTER')
+        .map(createCounter)
+        .forEach(mergeToIndex)
     }
   }
 }
