@@ -2,7 +2,7 @@
 
 const Store = require('orbit-db-store')
 const CounterIndex = require('./CounterIndex')
-const Counter = require('crdts/src/G-Counter')
+const Counter = require('crdts').PNCounter
 
 class CounterStore extends Store {
   constructor(ipfs, id, dbname, options = {}) {
@@ -16,8 +16,22 @@ class CounterStore extends Store {
   }
 
   inc(amount) {
-    const counter = new Counter(this.uid, Object.assign({}, this._index.get()._counters))
+    const counter = new PNCounter(this.uid,
+      new GCounter(this.uid, this._index.get().p._counters),
+      new GCounter(this.uid, this._index.get().n._counters))
     counter.increment(amount)
+    return this._addOperation({
+      op: 'COUNTER',
+      key: null,
+      value: counter.toJSON(),
+    })
+  }
+
+  dec(amount) {
+    const counter = new PNCounter(this.uid,
+      new GCounter(this.uid, this._index.get().p._counters),
+      new GCounter(this.uid, this._index.get().n._counters))
+    counter.decrement(amount)
     return this._addOperation({
       op: 'COUNTER',
       key: null,

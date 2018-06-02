@@ -5,17 +5,16 @@
   <body>
     <div id="result">Loading...</div>
 
-    <script type="text/javascript" src="lib/orbitdb.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="lib/orbitdb.js" charset="utf-8"></script>
     <script type="text/javascript" src="lib/ipfs-api.min.js" charset="utf-8"></script>
 
     <script type="text/javascript">
 
-      const username = new Date().getTime()
+      const username = '' + new Date().getTime()
       const channel  = 'browser-counter-example'
-      const creatures = ['👻', '🐙', '🐷', '🐬', '🐞', '🐈', '🙉', '🐸', '🐓']
 
+      const elm = document.getElementById("result")
       try {
-        const elm = document.getElementById("result")
         const ipfs = IpfsApi('localhost', '5001')
         const orbit = new OrbitDB(ipfs, username)
         const counter = orbit.counter(channel + ".count")
