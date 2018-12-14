@@ -16,7 +16,7 @@ class CounterStore extends Store {
   }
 
   inc(amount) {
-    const counter = new Counter(this.uid, Object.assign({}, this._index.get()._counters))
+    const counter = new Counter(this.identity.publicKey, Object.assign({}, this._index.get()._counters))
     counter.increment(amount)
     return this._addOperation({
       op: 'COUNTER',
