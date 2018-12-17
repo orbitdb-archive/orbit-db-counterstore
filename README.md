@@ -13,7 +13,8 @@ Used in [orbit-db](https://github.com/orbitdb/orbit-db).
 - [Install](#install)
 - [Usage](#usage)
 - [API](#api)
-- [Contributing](#contributing)
+- [Contribute](#contribute)
+  - [Linting](#linting)
 - [License](#license)
 
 ## Install
@@ -63,13 +64,13 @@ See [example/index.html](https://github.com/orbitdb/orbit-db-counterstore/blob/m
 
 ## API
 
-See [orbit-db's API Documenations](https://github.com/orbitdb/orbit-db/blob/master/API.md#countername) for full details.
+See [OrbitDB's API Documentation](https://github.com/orbitdb/orbit-db/blob/master/API.md#countername) for full details.
 
-## Contributing
+## Contribute
 
-If you think this could be better, please [open an issue](https://github.com/orbitdb/repo-template/issues/new)!
+Please, feel free to contribute! Take a look at [the issues](https://github.com/orbitdb/orbit-db-counterstore/issues), and comment on an existing issue or create a new one if you have questions, bugs, or suggestions. For larger PRs, open an issue first if you could - drive-by PRs are also welcomed.
 
-Please note that all interactions in @orbitdb fall under our [Code of Conduct](CODE_OF_CONDUCT.md).
+Please abide by the [Code of Conduct](CODE_OF_CONDUCT.md). For more on contributing to OrbitDB, check out the docs in [orbitdb/welcome](https://github.com/orbitdb/welcome).
 
 ## License
 
