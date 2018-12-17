@@ -10,7 +10,8 @@
     "url": "https://github.com/orbitdb/orbit-db-counterstore"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard"
   },
   "keywords": [
     "counters",
@@ -26,6 +27,8 @@
     "adam-palazzo"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/orbitdb/orbit-db-counterstore",
+  "bugs": "https://github.com/orbitdb/orbit-db-counterstore/issues",
   "dependencies": {
     "crdts": "~0.1.2",
     "orbit-db-store": "next"
