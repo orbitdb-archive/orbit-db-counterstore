@@ -3,10 +3,28 @@
   "version": "1.4.0",
   "description": "Counter store for orbit-db",
   "main": "src/CounterStore.js",
+  "homepage":"https://github.com/orbitdb/orbit-db-counterstore",
+  "bugs": "https://github.com/orbitdb/orbit-db-counterstore/issues/",
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/orbitdb/orbit-db-counterstore"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Haad",
+  "keywords":[
+    "counters",
+    "database",
+    "orbit-db",
+    "orbitdb"
+  ],
+  "contributors": [
+    "Haad",
+    "greenkeeperio-bot",
+    "shamb0t"
+    "RichardLitt"
+    "adam-palazzo"
+  ],
   "license": "MIT",
   "dependencies": {
     "crdts": "~0.1.2",
