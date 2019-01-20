@@ -2,6 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/orbit-db-counterstore.svg)](https://badge.fury.io/js/orbit-db-counterstore)
 
+> Counters database for OrbitDB
+
 A simple counters database. Useful for example counting events separate from data.
 
 Used in [orbit-db](https://github.com/haadcode/orbit-db).
@@ -15,6 +17,9 @@ Used in [orbit-db](https://github.com/haadcode/orbit-db).
 - [License](#license)
 
 ## Install
+
+This project uses [npm](https://npmjs.com) and [nodejs](https://nodejs.org)
+
 ```
 npm install orbit-db ipfs
 ```
@@ -62,7 +67,9 @@ See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/mas
 
 ## Contributing
 
-See [orbit-db's contributing guideline](https://github.com/haadcode/orbit-db#contributing).
+If you think this could be better, please [open an issue](https://github.com/orbitdb/repo-template/issues/new)!
+
+Please note that all interactions in @orbitdb fall under our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## License
 
