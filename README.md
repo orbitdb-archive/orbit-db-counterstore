@@ -6,7 +6,7 @@
 
 A simple counters database. Useful for example counting events separate from data.
 
-Used in [orbit-db](https://github.com/haadcode/orbit-db).
+Used in [orbit-db](https://github.com/orbitdb/orbit-db).
 
 ## Table of Contents
 
@@ -33,17 +33,17 @@ const IPFS = require('ipfs')
 const OrbitDB = require('orbit-db')
 
 const ipfs = new IPFS()
-const orbitdb = new OrbitDB(ipfs)
+const orbitdb = OrbitDB.createInstance(ipfs)
 ```
 
 Get a log database and add an entry to it:
 
 ```javascript
-const counter = orbitdb.counter('visitors')
-counter.inc()
+const counter = await orbitdb.counter('visitors')
+await counter.inc()
 console.log(counter.value)
 // 1
-counter.inc(4)
+await counter.inc(4)
 console.log(counter.value)
 // 5
 ```
@@ -51,19 +51,19 @@ console.log(counter.value)
 Later, when the database contains data, load the history and query when ready:
 
 ```javascript
-const counter = orbitdb.counter('visitors')
+const counter = await orbitdb.counter('visitors')
 counter.events.on('ready', () => {
-  counter.inc()
+  await counter.inc()
   console.log(counter.value)
   // 6
 })
 ```
 
-See [example/index.html](https://github.com/haadcode/orbit-db-counterstore/blob/master/example/index.html) for a detailed example. Note that to run this example, you need to have a local [IPFS daemon](https://dist.ipfs.io/go-ipfs/floodsub-2) [running](https://ipfs.io/docs/getting-started/) at port 5001.
+See [example/index.html](https://github.com/orbitdb/orbit-db-counterstore/blob/master/example/index.html) for a detailed example. Note that to run this example, you need to have a local [IPFS daemon](https://dist.ipfs.io/go-ipfs/floodsub-2) [running](https://ipfs.io/docs/getting-started/) at port 5001.
 
 ## API
 
-See [orbit-db's API Documenations](https://github.com/haadcode/orbit-db/blob/master/API.md#countername) for full details.
+See [orbit-db's API Documenations](https://github.com/orbitdb/orbit-db/blob/master/API.md#countername) for full details.
 
 ## Contributing
 
