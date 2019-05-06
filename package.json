@@ -10,6 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "crdts": "~0.1.2",
-    "orbit-db-store": "orbitdb/orbit-db-store#patch/2.5.4"
+    "orbit-db-store": "~2.5.4"
   }
 }
