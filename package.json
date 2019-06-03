@@ -28,6 +28,6 @@
   "license": "MIT",
   "dependencies": {
     "crdts": "~0.1.2",
-    "orbit-db-store": "~2.6.0"
+    "orbit-db-store": "github:orbitdb/orbit-db-store#feat/ipfs-0.36.x"
   }
 }
