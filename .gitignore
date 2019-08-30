@@ -1,3 +1,5 @@
 *sublime*
 node_modules/
 package-lock.json
+example/lib/ipfs-api.min.js
+example/lib/orbitdb.min.js
