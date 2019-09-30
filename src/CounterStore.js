@@ -5,23 +5,25 @@ const CounterIndex = require('./CounterIndex')
 const Counter = require('crdts/src/G-Counter')
 
 class CounterStore extends Store {
-  constructor(ipfs, id, dbname, options = {}) {
-    if(!options.Index) Object.assign(options, { Index: CounterIndex })
+  constructor (ipfs, id, dbname, options = {}) {
+    if (!options.Index) {
+      Object.assign(options, { Index: CounterIndex })
+    }
     super(ipfs, id, dbname, options)
     this._type = 'counter'
   }
 
-  get value() {
+  get value () {
     return this._index.get().value
   }
 
-  inc(amount) {
+  inc (amount) {
     const counter = new Counter(this.identity.publicKey, Object.assign({}, this._index.get()._counters))
     counter.increment(amount)
     return this._addOperation({
       op: 'COUNTER',
       key: null,
-      value: counter.toJSON(),
+      value: counter.toJSON()
     })
   }
 }
