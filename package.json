@@ -1,6 +1,6 @@
 {
   "name": "orbit-db-counterstore",
-  "version": "1.6.0-rc3",
+  "version": "1.6.0",
   "description": "Counter store for orbit-db",
   "main": "src/CounterStore.js",
   "homepage": "https://github.com/orbitdb/orbit-db-counterstore",
@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "crdts": "~0.1.2",
-    "orbit-db-store": "next"
+    "orbit-db-store": "~2.7.0"
   },
   "standard": {
     "env": [
