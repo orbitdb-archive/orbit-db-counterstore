@@ -29,7 +29,7 @@
   "license": "MIT",
   "dependencies": {
     "crdts": "~0.1.2",
-    "orbit-db-store": "orbitdb/orbit-db-store#feat/optional-pin"
+    "orbit-db-store": "~3.0.0"
   },
   "standard": {
     "env": [
