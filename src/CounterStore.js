@@ -17,14 +17,14 @@ class CounterStore extends Store {
     return this._index.get().value
   }
 
-  inc (amount) {
+  inc (amount, options = {}) {
     const counter = new Counter(this.identity.publicKey, Object.assign({}, this._index.get()._counters))
     counter.increment(amount)
     return this._addOperation({
       op: 'COUNTER',
       key: null,
       value: counter.toJSON()
-    })
+    }, options)
   }
 }
 
