@@ -1,6 +1,6 @@
 {
   "name": "orbit-db-counterstore",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "Counter store for orbit-db",
   "main": "src/CounterStore.js",
   "homepage": "https://github.com/orbitdb/orbit-db-counterstore",
@@ -31,7 +31,7 @@
     "crdts": "~0.1.2"
   },
   "peerDependencies": {
-    "orbit-db-store": "3.x"
+    "orbit-db-store": "4.x"
   },
   "standard": {
     "env": [
