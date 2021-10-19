@@ -10,6 +10,7 @@ class CounterStore extends Store {
       Object.assign(options, { Index: CounterIndex })
     }
     super(ipfs, id, dbname, options)
+    this._index = new this.options.Index(this.identity.id)
     this._type = 'counter'
   }
 
@@ -18,7 +19,7 @@ class CounterStore extends Store {
   }
 
   inc (amount, options = {}) {
-    const counter = new Counter(this.identity.publicKey, Object.assign({}, this._index.get()._counters))
+    const counter = new Counter(this.identity.id, Object.assign({}, this._index.get()._counters))
     counter.increment(amount)
     return this._addOperation({
       op: 'COUNTER',
