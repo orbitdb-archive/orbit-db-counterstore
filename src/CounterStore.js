@@ -10,6 +10,7 @@ class CounterStore extends Store {
       Object.assign(options, { Index: CounterIndex })
     }
     super(ipfs, id, dbname, options)
+    this._index = new this.options.Index(this.identity.publicKey)
     this._type = 'counter'
   }
 
