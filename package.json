@@ -2,6 +2,7 @@
   "name": "orbit-db-counterstore",
   "version": "1.12.1",
   "description": "Counter store for orbit-db",
+  "type": "module",
   "main": "src/CounterStore.js",
   "homepage": "https://github.com/orbitdb/orbit-db-counterstore",
   "bugs": "https://github.com/orbitdb/orbit-db-counterstore/issues",
@@ -10,8 +11,8 @@
     "url": "https://github.com/orbitdb/orbit-db-counterstore"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard"
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "keywords": [
     "counters",
@@ -28,22 +29,22 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "crdts": "~0.1.2"
+    "crdts": "github:haydenyoung/crdts#esm"
   },
   "peerDependencies": {
-    "orbit-db-store": "4.x"
+    "orbit-db-store": "github:haydenyoung/orbit-db-store#esm"
   },
   "standard": {
     "env": [
       "mocha"
     ]
   },
-  "devDependencies": {
-    "standard": "^14.3.1"
-  },
   "localMaintainers": [
     "haad <haad@haja.io>",
     "shamb0t <shams@haja.io>",
     "hajamark <mark@haja.io>"
-  ]
+  ],
+  "devDependencies": {
+    "standard": "^17.0.0"
+  }
 }
