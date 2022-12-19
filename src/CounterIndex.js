@@ -1,6 +1,6 @@
 import { GCounter as Counter } from 'crdts'
 
-export defualt class CounterIndex {
+export default class CounterIndex {
   constructor (id) {
     this._index = new Counter(id)
   }
