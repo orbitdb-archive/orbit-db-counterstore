@@ -29,10 +29,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "crdts": "github:orbitdb/crdts#esm"
+    "crdts": "next"
   },
   "peerDependencies": {
-    "orbit-db-store": "github:orbitdb/orbit-db-store#esm"
+    "orbit-db-store": "next"
   },
   "standard": {
     "env": [
