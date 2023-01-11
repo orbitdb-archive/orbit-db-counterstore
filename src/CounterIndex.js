@@ -1,8 +1,6 @@
-'use strict'
+import { GCounter as Counter } from 'crdts'
 
-const Counter = require('crdts/src/G-Counter')
-
-class CounterIndex {
+export default class CounterIndex {
   constructor (id) {
     this._index = new Counter(id)
   }
@@ -21,5 +19,3 @@ class CounterIndex {
     }
   }
 }
-
-module.exports = CounterIndex
